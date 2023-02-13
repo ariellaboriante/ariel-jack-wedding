@@ -1,0 +1,761 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: inherit;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.6em;
+    scroll-behavior: smooth;
+}
+
+html {
+    image-rendering: optimizeQuality;
+    /*-webkit-font-smoothing: antialiased;*/
+}
+
+
+/****Progress Bar Placement & Styling*****/
+
+#progressive {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+.progress {
+    height: 5px;
+}
+.ease-inout-speed {
+    -webkit-transition: width 2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    -moz-transition: width 2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    -ms-transition: width 2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    -o-transition: width 2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: width 2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+#shadow {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+
+/**************Typography****************/
+
+h1 {font-size: 40px;}
+h2 {font-size: 36px;}
+h3 {font-size: 32px;}
+h4 {font-size: 28px;}
+h5 {font-size: 24px;}
+h6 {font-size: 20px;}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: #444;
+    line-height: 1.1em;
+}
+p {
+    margin: 0 0 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    color: #666;
+}
+.p-justify {
+    text-align: justify;
+    padding-left:15%;
+    padding-right:15%;
+}
+a {
+    color: inherit;
+    /*font-weight: bold;*/
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+/**************My Fonts****************/
+
+@font-face {
+    font-family: 'isabelaregular';
+    src: url('../fonts/isabela/isabela-zvpvx-webfont.woff2') format('woff2');
+    src: url('../fonts/isabela/isabela-zvpvx-webfont.woff') format('woff');
+    src: url("../fonts/isabela/isabela-zvpvx.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'saturdateregular';
+    src: url("../fonts/saturdate/saturdate.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+.isabela-text {
+    font-family: 'isabelaregular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+.saturdate-text {
+    font-family: 'saturdateregular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+/**************Navbar****************/
+
+.navbar{
+    width: 100%;
+    padding: 20px 0 20px 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    box-shadow: none;
+}
+.navbar .logo {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.navbar .logo a{
+    padding-left: 2rem;
+    color: #fff;
+}
+.navbar .nav-icons {
+    float: right;
+}
+.navbar .nav-icons ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar .nav-icons ul li {
+    padding-right: 45px;
+    display: block;
+    line-height: 10px;
+}
+.navbar .nav-icons ul li a {
+    color: #fff;
+}
+.navbar .nav-icons ul li#rsvp-navtext{
+    line-height: 30px;
+}
+.affix {
+    padding: 0;
+    background-color: #fff;
+}
+.add-shadow{
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+}
+.nav-text-black {
+    color: #111 !important;
+}
+.nav-text-white {
+    color: #fff !important;
+}
+[data-title] {
+    position: relative;
+}
+
+/**************Home Section****************/
+
+#master {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+}
+
+#home {
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    /*background-image: url(../img/photos/horizontal/lake-moraine.jpg);*/
+    background-image: url(../img/photos/horizontal/jack-ariel.jpg);
+
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*    background-position: center top;*/
+    background-position: center center;
+    -webkit-transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
+    -moz-transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
+    -ms-transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
+    -o-transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
+    transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
+}
+
+#jumbotron-container{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 0px;
+}
+
+/*
+#jumbotron-img {
+position: absolute;
+border-radius: 50px;
+display: block;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, .3);
+}
+#jumbotron-img:hover {
+box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
+}
+*/
+
+.slogan {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    display: block;
+    text-shadow: 2px 2px 10px black;
+    letter-spacing: 2px;
+    color: #fff; 
+            text-align: center;
+
+}
+.slogan a {
+    text-decoration: none;
+    font-size: 1.6rem;
+        text-align: center;
+
+}
+.animate-slogan { 
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease-in-out; 
+
+    cursor: default;
+}
+.animate-slogan:hover { 
+    top: -10px;
+}
+
+
+/**************My Animations****************/
+.hover-grow1 { 
+    transition: transform .1s ease; 
+}
+.hover-grow1:hover { 
+    transform: scale(1.2); 
+}
+.hover-grow1:active,
+.hover-grow1:focus {
+    transform: scale(1.2); 
+}
+.hover-grow2 { 
+    transition: transform .2s ease; 
+}
+.hover-grow2:hover { 
+    transform: scale(1.2); 
+}
+[data-title]:hover:after {
+    content: attr(data-title);
+    font-size: 8px;
+    position: absolute;
+    bottom: -24px;
+    left: -10px;
+    white-space: nowrap;
+    z-index: 101;
+    opacity: 1;
+    transition: all 0.1s ease 0.2s;
+    transform: scale(1.2);
+    visibility: visible;
+}
+[id="details-data-title"][data-title]:hover:after {
+    left: -13px;
+}
+[id="our-story-data-title"][data-title]:hover:after {
+    left: -3px;
+}
+[id="rsvp-data-title"][data-title]:hover:after {
+    bottom: -28px;
+    left: 7px;
+}
+/*****************Animista*****************/
+.text-blur-out {
+    -webkit-animation: text-blur-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+    animation: text-blur-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+}
+.scale-out-center {
+    -webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2.3s both;
+    animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2.3s both;
+}
+.fade-out {
+    -webkit-animation: fade-out 0.5s ease-out 2.5s both;
+    animation: fade-out 0.5s ease-out 2.5s both;
+}
+.fade-in-bck {
+    -webkit-animation: fade-in-bck 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+    animation: fade-in-bck 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+}
+.fade-in-left {
+    -webkit-animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+    animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+}
+.fade-in-right1 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4s both;
+}
+.fade-in-right2 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4,1s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.1s both;
+}
+.fade-in-right3 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.2s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.2s both;
+}
+.fade-in-right4 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.3s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.3s both;
+}
+.fade-in-right5 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.4s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.4s both;
+}
+.fade-in-right6 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.5s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.5s both;
+}
+.fade-in-right7 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.6s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.6s both;
+}
+.fade-in-right8 {
+    -webkit-animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.7s both;
+    animation: fade-in-right 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 4.7s both;
+}
+.fade-in-bottom {
+    -webkit-animation: fade-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+    animation: fade-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+}
+.fade-in-bottom2 {
+    -webkit-animation: fade-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.7s both;
+    animation: fade-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.7s both;
+}
+.wobble-hor-bottom {
+    -webkit-animation: wobble-hor-bottom 1s 7s 3 both;
+    animation: wobble-hor-bottom 1s 7s 3 both;
+}
+
+/* ----------------------------------------------
+* Generated by Animista on 2020-1-13 21:22:36
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+@-webkit-keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+@keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+@-webkit-keyframes scale-out-center {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+@keyframes scale-out-center {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        /*
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;*/
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        /*
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;*/
+    }
+}
+@keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        /*
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;*/
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        /*
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;*/
+    }
+}
+@-webkit-keyframes fade-in-left {
+    0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-left {
+    0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fade-in-right {
+    0% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-right {
+    0% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+
+/**************My Dividers****************/
+
+.xsmall-divider{
+    padding-top: 30px;
+}
+.small-divider{
+    padding-top: 50px;
+}
+.medium-divider{
+    padding-top: 80px;
+}
+.divider{
+    padding-top: 150px;
+}
+.large-divider {
+    padding-top: 400px;
+}
+.xlarge-divider {
+    padding-top: 600px;
+}
+.divider-short {
+    background: #666;
+    display: block;
+    color: black;
+    width: 60px;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/****************My Margins****************/
+.mb5 {
+    margin-bottom: 5px !important;
+}
+.mb15 {
+    margin-bottom: 15px !important;
+}
+.mb30 {
+    margin-bottom: 30px !important;
+}
+.mb40 {
+    margin-bottom: 40px !important;
+}
+.mb50 {
+    margin-bottom: 50px !important;
+}
+.mb60 {
+    margin-bottom: 60px !important;
+}
+/****************My Settings****************/
+
+.mysection {
+    text-align: center;
+}
+
+.z1 {
+    z-index: 1;
+}
+.z10 {
+    z-index: 10;
+}
+.z100 {
+    z-index: 100;
+}
+.z1000 {
+    z-index: 1000;
+}
+
+/**************Our Story****************/
+.parallax-window {
+	min-height: 600px;
+	background: transparent;
+}
+
+body {
+    background: transparent !important
+}
+
+/**************What to Pack****************/
+
+.mycolumn {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.myrow:after {      
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .mycolumn {
+        width: 100%;
+    }
+}
+
+/**************What to See****************/
+
+.overlay {
+    border-radius: 0px;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, .3);
+}
+.overlay:hover {
+    /*box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);*/
+}
+.my-overlay {
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400;
+    
+}
+
+mylabel {
+    float: right;
+    text-align: right;
+}
+
+.gallery {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+    -webkit-column-width: 20%;
+    -moz-column-width: 20%;
+    column-width: 20%; 
+    margin: 0px 0px 0px 0px;
+}
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; 
+}
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); 
+}
+@media (max-width: 400px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+@media (max-width: 300px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+
+/**************RSVP****************/
+#rsvp {    
+    background-image: url(../img/photos/horizontal/rsvp-background.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
