@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');
-
 html, body {
     margin: 0;
     padding: 0;
@@ -13,15 +12,10 @@ html, body {
     line-height: 1.6em;
     scroll-behavior: smooth;
 }
-
 html {
     image-rendering: optimizeQuality;
-    /*-webkit-font-smoothing: antialiased;*/
 }
-
-
 /****Progress Bar Placement & Styling*****/
-
 #progressive {
     position: absolute;
     width: 300px;
@@ -45,17 +39,13 @@ html {
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
-
-
 /**************Typography****************/
-
 h1 {font-size: 40px;}
 h2 {font-size: 36px;}
 h3 {font-size: 32px;}
 h4 {font-size: 28px;}
 h5 {font-size: 24px;}
 h6 {font-size: 20px;}
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 10px;
     font-family: 'Lato', sans-serif;
@@ -85,7 +75,6 @@ a {
 a:hover, a:focus {
     text-decoration: none;
 }
-
 /* If the screen size is 600px wide or less*/
 @media screen and (max-width: 600px) {
     h1 {font-size: 40px;}
@@ -95,10 +84,7 @@ a:hover, a:focus {
     h5 {font-size: 24px;}
     h6 {font-size: 20px;}
 }    
-
-
 /**************My Fonts****************/
-
 @font-face {
     font-family: 'isabelaregular';
     src: url('../fonts/isabela/isabela-zvpvx-webfont.woff2') format('woff2');
@@ -127,7 +113,6 @@ a:hover, a:focus {
     font-size: 3em; /* fallback value */
     font-size: 3vw;
 }
-
 /* If the screen size is 600px wide or less*/
 @media screen and (max-width: 600px) {
     .isabela-text {
@@ -136,10 +121,9 @@ a:hover, a:focus {
     }
     .saturdate-text {
         font-size: 1.2em;
-        line-height: 1;
+        line-height: 3;
     }
 }
-
 /* If the screen size is 601px wide or more*/
 @media screen and (min-width: 601px) {
     .isabela-text {
@@ -149,10 +133,7 @@ a:hover, a:focus {
         font-size: 2.3vw;
     }
 }
-
-
 /**************Navbar****************/
-
 .navbar{
     width: 100%;
     padding: 20px 0 20px 0;
@@ -191,17 +172,20 @@ a:hover, a:focus {
 .navbar .nav-icons ul li a {
     color: #fff;
 }
+.navbar .navbar-brand {
+    font-size: 10px;
+    letter-spacing: .18em;
+    line-height: 1.7 !important;
+}
 
 .navbar .nav-icons .navtext{
     font-size: 10px;
     letter-spacing: .18em;
     line-height: 1.7 !important;
 }
-
 li.nav-item{
     padding: 0 48px 0 0 !important;
 }
-
 .affix {
     padding: 0;
     background-color: #fff;
@@ -218,45 +202,37 @@ li.nav-item{
 [data-title] {
     position: relative;
 }
-
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
     padding: 0px 0px 0px 0px !important;
     display: inline-block;
     color: #fff;
 }
-
 /* If the screen size is 600px wide or less*/
-/* Navbar collapses to sidebar*/
 /*@media screen and (max-width: 600px) {*/
-
-/* navbar becomes mobile sidebar under lg breakpoint */
-@media (max-width: 992px) {
-
-    /*.navbar {
+/* Navbar becomes mobile sidebar under lg breakpoint */
+@media (max-width: 991px) {
+    .navbar {
         color: transparent;
-    }*/
+    }
     .navbar .logo a{
         padding-left: 60%;
         display: none;
     }
-    
     #desktop-logo{
         display: none;
     } 
     #mobile-logo{
         display: inherit;
     }
-    
-    .navbar-collapse.collapsing .navbar-nav {
-        display: block;
-        position: fixed;
+    .navbar-collapse.collapsing {
+        display:none;
+        /*position: fixed;
         top: 0;
         bottom: 0;
-        /*left: -45%;*/
-        transition: all 0.2s ease;
+        left: 0;
+        transition: all 0.2s ease;*/
     }
-
-    .navbar-collapse.show .navbar-nav {
+    .navbar-collapse.show .navbar-nav{
         position: fixed;
         top: 0;
         bottom: 0;
@@ -264,23 +240,26 @@ li.nav-item{
         flex-direction: column;
         height: auto;
         width: 40%;
-        transition: left 0.35s ease;
+        transition: left 0.2s ease;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         background-color: #fff;
     }
-    
+    /* hide close when burger shown */
+.navbar-toggler.collapsed .close {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    display: inline;
+}
     li.nav-item {
         padding: 0 0 0 10% !important;
         line-height: 3.5 !important;
-
-    }
-    
+    } 
 }
-
 /* If the screen size is 601px wide or more*/
 /*@media screen and (min-width: 601px) {*/
-    
-@media (min-width: 993px) {
+@media (min-width: 992px) {
     .navbar .logo a{
         padding-left: 1.4rem;
         color: #fff;
@@ -296,20 +275,17 @@ li.nav-item{
 }
 
 /**************Home Section****************/
-
 #master {
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
     perspective: 1000px;
 }
-
 #home {
     opacity: 0;
     width: 100%;
     height: 100vh;
     /*background-image: url(../img/photos/horizontal/lake-moraine.jpg);*/
     background-image: url(../img/photos/horizontal/jack-ariel.jpg);
-
     background-size:cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -323,7 +299,6 @@ li.nav-item{
     -o-transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
     transition: opacity .8s cubic-bezier(.215, .61, .355, 1) 3s;
 }
-
 #jumbotron-container{
     width: 100%;
     position: relative;
@@ -332,24 +307,6 @@ li.nav-item{
     margin: 0px;
     margin-right: 0px;
 }
-
-/*
-#jumbotron-img {
-position: absolute;
-border-radius: 50px;
-display: block;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto;
-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, .3);
-}
-#jumbotron-img:hover {
-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
-}
-*/
-
 .slogan {
     width: 100%;
     position: absolute;
@@ -359,51 +316,44 @@ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
     letter-spacing: 2px;
     color: #fff; 
     text-align: center;
-
 }
 .slogan a {
     text-decoration: none;
     text-align: center;
 }
-
 /* If the screen size is 601px wide or more*/
 @media screen and (min-width: 601px) {
     .jumbotron-text a{
-    font-size: 2.6vw;
-    line-height: 120%;
+        font-size: 2.6vw;
+        /*line-height: 120%;*/
     }
 }
-
 /* If the screen size is 600px wide or less*/
 @media screen and (max-width: 600px) {
     .jumbotron-text a{
-    font-size: 1.2em;
-    line-height: 0.5 !important ;
+        font-size: 1.2em;
+        /*line-height: 50%;*/
     }
 }
-
 .animate-slogan { 
     position: relative;
     top: 0;
     transition: top 0.2s ease-in-out; 
-
     cursor: default;
 }
 .animate-slogan:hover { 
     top: -10px;
 }
-
-
 /**************My Animations****************/
-.hover-grow1 { 
-    color: #000 !important;
-}
 .hover-change-color:hover {
     color: #9370DB !important;
 }
-.hover-change-color:active,
+.hover-change-color:active, 
 .hover-change-color:focus {
     color: #9370DB !important;
+}
+.hover-grow1 { 
+    color: #111 !important;
 }
 .hover-grow1 { 
     transition: transform .1s ease; 
@@ -509,7 +459,6 @@ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
     -webkit-animation: wobble-hor-bottom 1s 7s 3 both;
     animation: wobble-hor-bottom 1s 7s 3 both;
 }
-
 /* ----------------------------------------------
 * Generated by Animista on 2020-1-13 21:22:36
 * Licensed under FreeBSD License.
@@ -747,13 +696,11 @@ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
 /*Remove fad animation when navbar switches to mobile menu*/
 @media (max-width: 991px) {
     .fade-in-right1 {
-    -webkit-animation: none;
-    animation: none;
+        -webkit-animation: none;
+        animation: none;
     }
 }
-
 /**************My Dividers****************/
-
 .xsmall-divider{
     padding-top: 30px;
 }
@@ -782,13 +729,15 @@ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 /****************My Margins****************/
 .mb5 {
     margin-bottom: 5px !important;
 }
 .mb15 {
     margin-bottom: 15px !important;
+}
+.mb20 {
+    margin-bottom: 20px !important;
 }
 .mb30 {
     margin-bottom: 30px !important;
@@ -802,12 +751,25 @@ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
 .mb60 {
     margin-bottom: 60px !important;
 }
+.mb80 {
+    margin-bottom: 80px !important;
+}
+.mt0 {
+    margin-top: 0px !important;
+}
+.mt30 {
+    margin-top: 30px !important;
+}
+.mt80 {
+    margin-top: 80px !important;
+}
+.mt90 {
+    margin-top: 90px !important;
+}
 /****************My Settings****************/
-
 .mysection {
     text-align: center;
 }
-
 .z1 {
     z-index: 1;
 }
@@ -823,8 +785,8 @@ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
 
 /**************Our Story****************/
 .parallax-window {
-	min-height: 600px;
-	background: transparent;
+    min-height: 600px;
+    background: transparent;
 }
 
 body {
@@ -909,7 +871,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 400;
-    
+
 }
 
 mylabel {
