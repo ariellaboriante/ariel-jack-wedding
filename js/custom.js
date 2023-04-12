@@ -1,57 +1,118 @@
-// Parallax scrolling effect ----------------------------------
+var isMobileWindow = window.matchMedia("(max-width: 991px)");
+var isDesktopWindow = window.matchMedia("(min-width: 992px)");
 
-$(document).ready(function(){
+// Progress Bar animation ---------------------------------------------------------------
+$(document).ready(function() {
+    $('html, body').css({'overflow': 'hidden','height': '100%'});           // disable scrolling
+    $(".progress-bar").animate({width: "100%"}, 250 );                      // start in under a sec
+    $("#home").animate({opacity: "1"}, 250 );                               // start in under a sec
+    setTimeout(function(){$("#progressive").css("display", "none");}, 3000);// progress bar disappears in 3s
+    setTimeout(function(){$('html, body').css({'overflow':'auto','height':'auto'});}, 3000);//enable scrolling
 
-    // Populate images from data attributes.
-    var scrolled = $(window).scrollTop()
-    $('.parallax').each(function(index) {
-        var imageSrc = $(this).data('image-src')
-        var imageHeight = $(this).data('height')
-        $(this).css('background-image','url(' + imageSrc + ')')
-        $(this).css('height', imageHeight)
+    // on startup, set the sidebar links to black
+    if (isMobileWindow.matches) {
+        $('.navbar').removeClass('affix');
+        //$('.navbar').removeClass('add-shadow');
+        //$('.navtext').removeClass('nav-text-white');
+        //$('.navtext').removeClass('hover-grow2');
+        //$('.navtext').addClass('nav-text-black');
+        //$('.navtext').addClass('hover-change-color');
+        //$(".nav-icons a").css("color", "black");
+        //console.log("OK");
+    }
+     else if (isDesktopWindow.matches) {
+            $('.navbar').removeClass('affix');
+            $('.navbar').removeClass('add-shadow');
+            $('.navtext').addClass('nav-text-white');
+            $('.navtext').removeClass('nav-text-black');
+            $('.navtext').addClass('hover-grow2');
+            $('.navtext').removeClass('hover-change-color');
+            $('.navbar-brand').addClass('nav-text-white');
+            $('.navbar-brand').removeClass('nav-text-black');
+            $(".nav-icons a").css("color", "white");
+            console.log("OK");
 
-        // Adjust the background position.
-        var initY = $(this).offset().top
-        var height = $(this).height()
-        var diff = scrolled - initY
-        var ratio = Math.round((diff / height) * 100)
-        $(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
-    })
+        }
+var nav = document.getElementById('access_nav'),
+    body = document.body;
 
-    // Attach scroll event to window. Calculate the scroll ratio of each element
-    // and change the image position with that ratio.
-    // https://codepen.io/lemagus/pen/RWxEYz
-    $(window).scroll(function() {
-        var scrolled = $(window).scrollTop()
-        $('.parallax').each(function(index, element) {
-            var initY = $(this).offset().top
-            var height = $(this).height()
-            var endY  = initY + $(this).height()
+nav.addEventListener('click', function(e) {
+    body.className = body.className? '' : 'with_nav';
+    e.preventDefault();
+});
+});
 
-            // Check if the element is in the viewport.
-            var visible = isInViewport(this)
-            if(visible) {
-                var diff = scrolled - initY
-                var ratio = Math.round((diff / height) * 100)
-                $(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
-            }
-        })
-    })
-})
+// Hide shadow when not scrolling (Desktop view only) ----------------------------------
+var didScroll;  
 
-// Check if the element is in the viewport.
-// http://www.hnldesign.nl/work/code/check-if-element-is-visible/
-function isInViewport(node) {
-    // Am I visible? Height and Width are not explicitly necessary in visibility
-    // detection, the bottom, right, top and left are the essential checks. If an
-    // image is 0x0, it is technically not visible, so it should not be marked as
-    // such. That is why either width or height have to be > 0.
-    var rect = node.getBoundingClientRect()
-    return (
-        (rect.height > 0 || rect.width > 0) &&
-        rect.bottom >= 0 &&
-        rect.right >= 0 &&
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-    )
+$(window).scroll(function(event) {
+    didScroll = true;
+    if (isDesktopWindow.matches) {   
+        $('.navbar').addClass('add-shadow');
+    }
+});
+
+setInterval(function() {  
+        if (didScroll && isDesktopWindow.matches) {
+            $('.navbar').removeClass('add-shadow');
+            didScroll = false;
+        }
+}, 250);
+
+// Change navbar depending on window size-----------------------------------------------
+function setNavbar(x) {
+    if (x.matches) {
+        $('.navbar').removeClass('affix');
+        $('.navbar').removeClass('add-shadow');
+        $('.navtext').removeClass('nav-text-white');
+        $('.navtext').addClass('nav-text-black');
+        $('.navtext').removeClass('hover-grow2');
+        $('.navtext').addClass('hover-change-color');
+        $(".nav-icons a").css("color", "black");
+        console.log("OK");
+    }
+    else
+    {
+        $('.navbar').addClass('affix');
+        $('.navbar').addClass('add-shadow');
+        $('.navtext').addClass('nav-text-black');
+        $('.navtext').removeClass('nav-text-white');
+        $('.navtext').addClass('hover-grow2');
+        $('.navtext').removeClass('hover-change-color');
+        $('.navbar-brand').addClass('nav-text-black');
+        $('.navbar-brand').removeClass('nav-text-white');
+        $(".nav-icons a").css("color", "black");
+        console.log("OK");
+    }
 }
+
+setNavbar(isMobileWindow)   // Call listener function at run time
+isMobileWindow.addListener(setNavbar)  // Attach listener function on state changes
+
+// Change navbar depending on scroll (Desktop view only)--------------
+$(window).scroll(function() {
+        if ($(window).scrollTop() > 500 && isDesktopWindow.matches) {
+            $('.navbar').addClass('affix');
+            $('.navbar').addClass('add-shadow');
+            $('.navtext').addClass('nav-text-black');
+            $('.navtext').removeClass('nav-text-white');
+            $('.navtext').addClass('hover-grow2');
+            $('.navtext').removeClass('hover-change-color');
+            $('.navbar-brand').addClass('nav-text-black');
+            $('.navbar-brand').removeClass('nav-text-white');
+            $(".nav-icons a").css("color", "black");
+            console.log("OK");
+        }
+        else if (isDesktopWindow.matches) {
+            $('.navbar').removeClass('affix');
+            $('.navbar').removeClass('add-shadow');
+            $('.navtext').addClass('nav-text-white');
+            $('.navtext').removeClass('nav-text-black');
+            $('.navtext').addClass('hover-grow2');
+            $('.navtext').removeClass('hover-change-color');
+            $('.navbar-brand').addClass('nav-text-white');
+            $('.navbar-brand').removeClass('nav-text-black');
+            $(".nav-icons a").css("color", "white");
+            console.log("OK");
+        }
+});
