@@ -1,7 +1,4 @@
-<!--center logo for mobile -->
 <!--add logo to sidebar for mobile-->
-<!--add close button-->
-<!--remove photos. Website too slow-->
 
 <!DOCTYPE html>
 <html lang="en" class="html">
@@ -9,7 +6,6 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Ariel &amp; Jack Wedding</title>
         <link rel="icon" href="img/favicon_io/favicon.ico">
-
         <!--Stylesheets---------------------->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -17,7 +13,6 @@
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-
     <body>
         <!--Progress Bar Loading Page-------->
         <div class="container">
@@ -37,7 +32,7 @@
 
                 <!--ariel <3 zhuolin logo for desktop-->
                 <div class="logo fade-in-left" id="desktop-logo"> 
-                    <div class="hover-grow2"><a href="#" class="saturdate-text navtext navbar-brand">ariel &#10084; zhuolin</a></div>
+                    <div class="hover-grow1"><a href="#" class="saturdate-text navbar-brand">ariel &#10084; zhuolin</a></div>
                 </div>
                 
                 <!--ariel <3 zhuolin logo for mobile-->
@@ -46,7 +41,8 @@
                 </div>
                 
                 <!--hamburger button-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-menu" aria-controls="navigation-menu" aria-expanded="false" aria-label="Toggle navigation" style="z-index: 1">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation-menu" aria-controls="navigation-menu" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-icon" style="z-index: 1">
+                <span class="my-1 mx-2 close">X</span>
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 
@@ -69,223 +65,170 @@
         <!--Jumbotron---------------------------------------------------------------------------------->
         <div id="master">
             <section id="home" class="jumbotron fade-in-bck" style="text-align:center; opacity: 0;">
-
                 <div style="padding-top:110px;"></div>
-
                 <div id="jumbotron-container">
-
                     <!--<div class="xsmall-divider"></div>-->
-
-                    <div class="slogan animate-slogan fade-in-bottom" style="margin-top:0px; padding: 0;">
+                    <div class="slogan animate-slogan fade-in-bottom mt0" style="padding: 0;">
                         <a class="saturdate-text jumbotron-text">We Are Getting Married <span class="isabela-text" style="font-style:italic; font-size:60px;">!</span></a>
                     </div>  
-
-                    <div class="xsmall-divider" style="margin-top:0px; padding: 10px;"></div>
-
-                    <div class="slogan animate-slogan fade-in-bottom2" style="margin-top:30px; padding-left: 10px;">
+                    <div class="xsmall-divider mt0" style="padding: 10px;"></div>
+                    <div class="slogan animate-slogan fade-in-bottom2 mt30" style="padding-left: 10px;">
                         <a class="saturdate-text" style="font-size:10px;">21  May  2024</a>
                     </div>
-
                 </div>
-
             </section>
         </div>
 
-        <!--Wedding Details---------------------------------------------------------------------------------->
+        <!--Wedding Details---------------------------------------------------------------------------->
         <section id="wedding-details" class="mysection">
-
             <div class="divider"></div>
             <h3 class="saturdate-text">Wedding Details</h3>
-
-            <p style="margin:90px 0 50px 0;">Please join us in the celebration of our marriage on<br>Tuesday, May 21, 2024</p>
-
-            <a href="https://www.banffjaspercollection.com/attractions/banff-gondola/" target="_blank" style="text-decoration:none;"><h2>Peak Patio</h2>
-                <p class="mb50">Banff Gondola Summit Fourth Floor<br>Ceremony at 2:00 pm</p>
+            <p class="mt90 mb50">Please join us in the celebration of our marriage on<br>Tuesday, May 21, 2024</p>
+            <a href="https://www.banffjaspercollection.com/attractions/banff-gondola/dining/peak-patio/" target="_blank" style="text-decoration:none;"><h2>Peak Patio</h2>
+                <p class="mb50">Banff Gondola Fourth Floor<br>Ceremony at 2:00 pm</p>
             </a>
-
             <a href="https://www.banffjaspercollection.com/dining/sky-bistro/" target="_blank" style="text-decoration:none;"><h2>Sky Bistro</h2>
-                <p class="mb50">Banff Gondola Summit Third Floor<br> Reception at 4:00 pm</p>
+                <p class="mb50">Banff Gondola Third Floor<br> Reception at 4:00 pm</p>
             </a>
-
-            <p class="mb60">We can't wait to celebrate you! To access the venue, you will need to ride the gondola car up to the summit of Sulphur Mountain. Our wedding guests have free admission to the gondola starting at noon. Please arrive early so you can enjoy the views before our ceremony, and please dress in formal attire. Remember, the ceremony will take place on the building's rooftop patio so be sure to bring a warm coat!</p>
-
-            <p class="mb60">Also, please join us for a welcome picnic on Sunday, May 19, 2024 at Emerald Lake. Bring your canoeing arms! Dinner plans TBD.</p>
-
+            <p class="mb60">We can't wait to celebrate you! To access the venue, you will need to ride the gondola car up to the summit of Sulphur Mountain. Our wedding guests have free admission to the gondola<!-- starting at noon-->. Please arrive early so you can take photos and enjoy the views before our ceremony, and please dress in formal attire. Remember, the ceremony will take place on the building's rooftop patio so be sure to bring a warm coat!</p>
+            <p class="mb60">Also, please join us for a welcome picnic on Sunday, May 19, 2024 at Emerald Lake. Bring your canoeing arms! Dinner plans TBA.</p>
             <a href="https://www.google.ca/search?q=emerald+lake" target="_blank" style="text-decoration:none;"><h2>Emerald Lake</h2>
                 <p class="mb50">Yoho National Park<br>Lunch at 12:00 pm</p>
             </a>
-
         </section>
         <div class="divider-short"></div>
         
         <!--Our Story---------------------------------------------------------------------------------->
         <section id="our-story" class="mysection">
-
             <div class="divider"></div>
             <h3 class="saturdate-text mb60">Our Story</h3>   
- 
             <p>How We Met</p>
             <p class="p-justify">
-                We met each other in physics class during the first year of university. Right away, we bonded over busy schedules, formula sheets, and working late nights in the engineering lab for our robotics course. However, it wasn't until the summer of 2014 that we started talking to each other and eventually we decided to meet up. We agreed to invite our friends to watch Guardians of the Galaxy at Fairview mall. To the other's surprise, we both showed up alone and said our friends couldn't make it. That was our first date. Since then we've been like peas and carrots, graduating together, travelling to new and exciting places, and renovating our first home from top to bottom. However, the greatest achievement we have yet to accomplish is to start our own family. It's been our dream for quite a while and we can't wait for you to be there with us!
+               Our story begins in our first year of university. We met each other in physics class and bonded over busy schedules, formula sheets, and working late nights in the engineering lab. However, it wasn't until the summer of 2014 that we started talking to each other and eventually we decided to meet up. We agreed to invite our friends to watch Guardians of the Galaxy at Fairview mall. To the other's surprise, we both showed up alone and said our friends were unavailable. That was our first date. Since then we've been like peas and carrots, graduating together, travelling to new and exciting places, and renovating our first home from top to bottom. However, the greatest achievement we have yet to accomplish is to start our own family. It's been our dream for quite a while and we can't wait for you to be there with us!
             </p>
-
-            <!--<p class="p-justify">
-Jack and Ariel met in physics class during the first year of university. Ariel thought Jack was a really quiet guy with such a deep voice. That winter, Jack asked Ariel for her phone number in case he needed "homework help". Over the next few months, Jack kept bothering Ariel for her formula sheets. Ariel was annoyed but she continued to help Jack and found out that he was pretty sweet. One time during a lab, he bought ice caps for everyone including Ariel. They continued to spend the year focusing on school work and eating lunch in the cafeteria with the group. That summer, Ariel and Jack started sending work snapchats to each other. Eventually they decided it would be good to meet up with all their university friends. Ariel said she would invite her friends and Jack would invite his. However, they both decided not to invite their friends and to the other's surprise, they both showed up alone. It was their first date. To this day, Jack does not remember what movie they watched.
-</p>-->
-
             <p>How He Proposed</p>
             <p class="p-justify">
-                On April 16, 2022, Jack proposed to me in the most unique way. It happened on our spontaneous Vegas road trip where we planned to hike Angel's Landing at Zion National Park. After a chaotic start of the day which involved picking up our jeep camper, learning how to set up the attached tent, buying groceries, crossing the Nevada-Utah border and finding out we "lost" an hour because of the time change, the day transition to one where everything fell right into place. Since we arrived late, everyone was already heading down the trail so at the top of the mountain, we had the whole place to ourselves! We were at a dangerous yet scenic point in the trail and I stopped to take a video of the amazing view. When I turned around, Jack was already on one knee! He opened his wallet and produced a ring that he managed to keep from the person that packs his suitcase! Jack didn't know it but incredibly, he proposed to me in my namesake place because my name Ariel is used synonymously with "Zion". A custom proposal from a person specifically made for me!
+                On April 16, 2022, we went on a spontaneous Vegas road trip where we planned to hike Angel's Landing at Zion National Park. After a chaotic start of the day which involved picking up our jeep camper, learning how to set up the attached tent, buying groceries, crossing the Nevada-Utah border and finding out we "lost" an hour because of the time change, the day transition to one where everything fell right into place. Since we arrived late, everyone was already heading down the trail so when we got to the mountain summit we had the whole place to ourselves! We were at a dangerous yet scenic point in the trail and I stopped to take a video of the amazing view. When I turned around, Jack was already on one knee. He opened his wallet and produced a ring that he managed to keep from the person that packs his suitcase. Jack didn't know it but incredibly, he proposed to me in my namesake place because my name Ariel is used synonymously with "Zion". A custom proposal from a person specifically made for me!
             </p>
-            <!--<p class="p-justify">
-                After purchasing our first house in February of 2022, we decided to go on a Vegas road trip as a last hurrah before we get locked in a mortgage (yay!). On the first day, we planned to hike Angel's Landing at Zion National Park. To hike Angel's Landing, you need to win a lottery system and choose the time of day to start your hike. The trail is only accessible by shuttle bus which picks you up from the parking lot. If you miss it, it's a 10km walk to or from the trail!
-                
-                Usually on most trips, Ariel plans out every detail but on this particular day, nothing was going according to plan. The original schedule was: 10am - pick up camping jeep, 11am - finish buying groceries, 2pm - start hiking Angel's Landing, 6pm - catch last shuttle bus. However, it was already 11am and the jeep rental guy was still explaining all the little gadgets inside our cool camper jeep. After getting groceries and starting the long drive, we found out we would lose another hour driving from Vegas to Zion Park because of the time difference! Oh no! With all the time travel aside, the day was an amazing one. By the time we got to the trailhead, everyone was already heading down so we had the place to ourselves! 
-                
-                Jack proposed to Ariel at a spot in Angel's Landing where the cliff dropped on either side so Ariel could not escape! Ariel was taking a video of the mountains and when she turned around, he was on one knee! Prior to the trip, Jack had already received the blessing of Ariel's parents but no one had anticipated how everything would fall into place. Growing up, Ariel's dad would constantly remind her of Isaiah 29 and that her name and Zion refered to the same thing. 
-                
-            </p>-->
-
         </section>
         <!--<div class="divider-short"></div>-->
         
-        <!---Image Banner---------------------------------------------------------------->
+        <!---Image Banner------------------------------------------------------------------------------->
         <div class="parallax-window" data-parallax="scroll" data-image-src="img/photos/horizontal/monument-valley.jpg"></div>
 
-        <!--Wedding Party---------------------------------------------------------------------------------->
+        <!--Wedding Party------------------------------------------------------------------------------->
         <section id="wedding-party" class="mysection">
-
             <div class="divider"></div>
             <h3 class="saturdate-text">Wedding Party</h3>
             <div style="padding-top:70px"></div>
-
             <a href="#photo-bride-parents" style="text-decoration:none;"> 
                 <p class="mb5">Parents of the Bride</p>
                 <h5 class="mb30">Josephine &amp; Paul Laboriante</h5>
             </a>
-
             <a href="#photo-groom-parents" style="text-decoration:none;"> 
                 <p class="mb5">Parents of the Groom</p>
                 <h5 class="mb30">Jun Liang &amp; Dong Min Lu</h5>
             </a>
-
             <a href="#photo-MOH" style="text-decoration:none;"> 
                 <p class="mb5">Maid of Honour</p>
                 <h5 class="mb30">Varsha Ragavendran</h5>
             </a>
-
             <a href="#photo-bestman" style="text-decoration:none;">
                 <p class="mb5">Bestman</p>
                 <h5 class="mb30">Kevin Arindaeng</h5>
             </a>
-
             <a href="#photo-bestman" style="text-decoration:none;">
                 <p class="mb5">Bridesmaids</p>
                 <h5 class="mb30">
                     Rejoice Laboriante<br>
                     Hannah Laboriante</h5>
             </a>
-
             <a href="#photo-bestman" style="text-decoration:none;">
                 <p class="mb5">Groomsmen</p>
                 <h5 class="mb30">
                     Lemuel Laboriante</h5>
             </a>
-
         </section>
         <div class="divider-short"></div>
 
-        <!--Getting There---------------------------------------------------------------------------------->
+        <!--Getting There------------------------------------------------------------------------------>
         <section id="getting-there" class="mysection">
 
             <div class="divider"></div>
             <h3 class="saturdate-text">Getting There</h3>            
-
-            <p style="margin: 80px 0 40px 0;">The easiest way to get to Banff is to fly to Calgary and then rent a car at the airport. From there, Banff is about 1 hour and 45 minutes. We recommend staying at Canmore for budget-friendly accommodations. Canmore is only a 30-minute drive away from Banff.</p>
-
+            <p class="mt80 mb40">The easiest way to get to Banff is to fly to Calgary and then rent a car at the airport. From there, Banff is about 1 hour and 45 minutes. We recommend staying at Canmore for budget-friendly accommodations. Canmore is only a 30-minute drive away from Banff.</p>
             <h2>Calgary International Airport(YYC)</h2>
             <p class="mb60">
-                2000 Airport Rd NE, Calgary, AB T2E 6W5<br>
-                Air Canada discount code: arieljack</p>
-
+            <!--2000 Airport Rd NE, Calgary, AB T2E 6W5<br>-->
+                <!--Air Canada discount code: arieljack</p>-->
+                Air Canada discount code to be posted
             <!--<h2>Avis Car Rental</h2>
             <p class="mb60">
                 2000 Airport Rd NE, Calgary, AB T2E 6W5<br>
                 Avis discount code: arieljack</p>-->
-
             <h2>Directions</h2>
             <p class="mb60">
                 <a href="https://www.banffjaspercollection.com/attractions/banff-gondola/hours-location#location" target="_blank" style="text-decoration:none; color: blue;">Getting to the Banff Gondola</a>
                 <br>
                 Free parking is available at the venue
             </p>
-
             <h2>Bus Service</h2>
             <p class="mb60">
-                Roam Transit Local Route 1<br>
-                Banff Gondola is serviced from 6:30am to 11:30pm with a $2 one-way fare. Click the link to see the bus schedule.<br>
+                <!--Roam Transit Local Route 1<br>-->
+                Banff Gondola is serviced by Roam Transit from 6:30am to 11:30pm<br>with a $2 one-way fare. Click the link to see the bus schedule.<br>
                 <a href="https://roamtransit.com/schedules-routes/banff-local-route-one/" target="_blank" style="text-decoration:none; color: blue;">roamtransit.com</a>
             </p>
-                        
-
         </section>
         <div class="divider-short"></div>
-        <!---Image Banner---------------------------------------------------------------->
+        <!---Image Banner------------------------------------------------------------------------------->
         <!--<div class="parallax-window" data-parallax="scroll" data-image-src="img/photos/horizontal/banff-gondola-2.jpg"></div>-->
 
-        <!--Accommodations---------------------------------------------------------------------------------->
+        <!--Accommodations------------------------------------------------------------------------------>
         <section id="accommodations" class="mysection">
 
             <div class="divider"></div>
             <h3 class="saturdate-text">Accommodations</h3>            
-
-            <p style="margin: 80px 0 20px 0;">For our guests, we recommend staying at a town called Canmore, which is 20 to 30 minutes from Banff. Canmore has more affordable airbnb options and breathtaking mountain views. Hotel room blocks will be posted once available.</p>
-            <!--<p style="margin: 80px 0 20px 0;">The night before the wedding, we will be staying at the Rimrock Resort. It is the closest hotel to the venue, but is not technically located in downtown Banff. For our guests, we recommend staying at a town called Canmore, which is 20 to 30 minutes from Banff. Canmore has more affordable options and breathtaking mountain views.</p>
-
+            <p class="mt80 mb20">For our guests, we recommend staying at a town called Canmore, which is 30 minutes from Banff. Canmore has more affordable airbnb options and breathtaking mountain views. Hotel room blocks will be posted once available.</p>
+            <!--<p class="mt80 mb20">The night before the wedding, we will be staying at the Rimrock Resort. It is the closest hotel to the venue, but is not technically located in downtown Banff. For our guests, we recommend staying at a town called Canmore, which is 20 to 30 minutes from Banff. Canmore has more affordable options and breathtaking mountain views.</p>
             <p>Request our room block at these accommodations:</p>
-
             <h2>Coast Canmore Hotel &amp; Conference Centre</h2>
             <p>
                 511 Bow Valley Trail, Canmore, AB T1W 1N7<br>
                 1-403-678-3625<br>
                 Book before April 24, 2023<br>
                 Group code: arieljack</p>
-
             <h2>Grande Rockies Resort</h2>
             <p>
                 901 Mountain Street, Canmore, AB T1W 0C9<br>
                 1-877-223-3398<br>
                 Book before April 30, 2023<br>
                 Group code: arieljack</p>
-
             <p>
                 If you are interested, the <a href="https://www.bestofbanff.com/" target="_blank">Banff Lodging Company</a> is offering everyone a 10% discount on the best rates from their hotels at the time of booking. Just call their reservations department at 1-800-563-8764 and reference "Laboriante and Lu Wedding - Group #1234567"<br>
                 <br>
                 Available Hotels:<br>
                 Moose Hotel &amp; Suites, Banff Caribou Lodge &amp; Spa, Banff Ptarmigan Inn, Fox Hotel &amp; Suites, Inns of Banff, Bumpers Inn, Rocky Mountain Resort, Tunnel Mountain Resort, Hidden Ridge Resort
             </p>-->
-
         </section>
        <div class="divider-short"></div>
 
-        <!--What to Pack---------------------------------------------------------------------------------->
-        <section id="what-to-pack" class="mysection"><!-- style="background-color: #f5f5f5">-->
+        <!--What to Pack------------------------------------------------------------------------------->
+        <section id="what-to-pack" class="mysection">
 
             <div class="divider"></div>
             <h3 class="saturdate-text">What to Pack</h3>            
-
             <p style="margin: 2em 0 2em 0;">                
                 Here's are some suggestions for what to bring for a week in Banff. The weather can be unpredictable so bring lots of layers!
             </p>
-
             <div class="container">
                 <div class="myrow" style="margin: 4% 15% 0 15%;">
                     <div class="mycolumn">
                         <h3 class="packing-titles">Clothing</h3>
                         <p class="packing-items">
-                            Shirts/activewear<br>
+                            Shirts<br>
                             Sweaters<br>
-                            Pants/thermals<br>
+                            Pants<br>
+                            Thermals<br>
                             Underwear<br>
                             Socks<br>
                             Swimwear
@@ -297,7 +240,8 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
                             Formal outfit<br>
                             Formal shoes<br>
                             Makeup<br>
-                            Jewellery/watch<br>
+                            Jewellery<br>
+                            Watch<br>
                             Hair curler<br>
                             Small purse
                         </p>
@@ -321,7 +265,7 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
                             Contacts/glasses<br>
                             First aid kit<br>
                             Feminine products<br>
-                            Brush/comb<br>
+                            Hair comb<br>
                             Makeup remover<br>
                             Moisturizer
                         </p>
@@ -334,8 +278,8 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
                         <p class="packing-items">
                             Wallet<br>
                             Passport/ID<br>
-                            Driver's License<br>
-                            Insurance Info<br>
+                            Driver's license<br>
+                            Insurance info<br>
                             Park pass<br>
                         </p>
                     </div>
@@ -372,9 +316,8 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
                 </div>
 
                 <p style="margin: 2% 0 10% 0;">                
-                    We would love it if you kindly dress according to our theme colours! Use the photos below as a guide to our wedding colour palette! 
+                    We would love it if you kindly dress according to our theme colours!<br>Use the photos below as a guide to our wedding colour palette! 
                 </p>
-
                 <div class="row" style="margin: 2% 0% 5% 0;">
                     <!-- Grid column -->
                     <div class="mb-3 col-sm-6 col-lg-4" style="padding: 0 0 0 0;">
@@ -386,13 +329,9 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
                     </div>
                 </div> 
             </div>
-
-
         </section>
 
         <div class="divider-short"></div>
-
-
 
         <!--What to See---------------------------------------------------------------------------------->
         <section id="what-to-see" class="mysection">
@@ -400,13 +339,10 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
             <h3 class="saturdate-text mb40">What to See</h3>            
             <div><p>Banff is a beautiful city! While you're in town, we recommend these activities and points of interest! 
                 Please note that you will need to purchase passes from <a href="https://www.pc.gc.ca/en/pn-np/ab/banff/visit/pass" target="_blank">Parks Canada</a> to visit national parks in Banff and Jasper.</p></div>
-
-
             <div class="container">
 
                 <!-- Grid row -->
                 <div class="gallery" id="gallery" style="margin: 2% 0 5% 0;">
-
                     <!-- Grid column -->
                     <div class="mb-3 pics animation all 2 z1 view overlay">
                         <img class="img-fluid" src="img/photos/horizontal/lake-minnewanka.jpeg" alt="Lake Minnewanka">
@@ -530,7 +466,6 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
                     <!-- Grid column -->
                 </div>
                 <!-- Grid row -->
-
             </div>
         </section>
 
@@ -538,7 +473,6 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
         <section id="rsvp" class="mysection">
             <div class="divider"></div>
             <div class="xsmall-divider"></div>
-
             <h3 class="saturdate-text mb60">RSVP</h3>            
             <div><p>We hope you can join us!<br>Email us at arieljackwedding@hotmail.com with your:</p></div>                          
             <div><p>
@@ -556,31 +490,22 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
             <h3 style="text-align: center; text-transform: uppercase; letter-spacing: 0.18em; font-size: 18px; font-weight: 400;">FAQ</h3>
             <div><p><br><b>When is the latest I can RSVP?</b><br>
                     Kindly RSVP no later than August 21st, 2023.</p></div>  
-            
             <div><p><b>What is the dress code for the wedding?</b><br>
                     Please dress in formal attire. Our ceremony will be outdoors so remember to bring a coat!</p></div>  
-
             <div><p><b>What will the weather be like in Banff this time of year?</b><br>
                     Spring weather can be unpredictable in Banff. We recommend wearing layers and bringing a jacket. The mountain tops can be quite cold!</p></div> 
-            
             <div><p><b>Where can I park?</b><br>
                     Parking is available at the Banff gondola for free.</p></div> 
-            
             <div><p><b>What happens after the ceremony?</b><br>
                     Please stay after the ceremony for group photos. You'll have some time to explore the trail before cocktail hours starts. At 5 PM, please head to our wedding reception on the third floor for the Sky Bistro restaurant.</p></div>  
-            
             <div><p><b>Does the wedding have a theme?</b><br>
                     We ask everyone to wear blue, purple or pink in keeping with our theme!</p></div>  
-            
             <div><p><b>What time should I arrive?</b><br>
                     Please arrive before 1:30 PM to allow for the upload time on the cable car.</p></div>  
-            
             <div><p><b>Are kids welcome?</b><br>
                     While we love your little ones, our wedding is going to be an adults-only event so that everyone can relax and enjoy the evening. We appreciate you making arrangements ahead of time and leaving the kids at home so you can celebrate with us.</p></div>
-            
             <div><p><b>Do you have a wedding registry?</b><br>
                     We do not have a wedding registry but we would appreciate a gift towards our honeymoon!</p></div>
-            
             <div><p><b>I have more questions. Where can I reach you?</b><br>
                     You can reach us on our personal contacts or at arieljackwedding@hotmail.com.</p></div>    
         </section> 
@@ -594,73 +519,6 @@ Jack and Ariel met in physics class during the first year of university. Ariel t
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="js/parallax.min.js"></script>
         <script src="js/wow.min.js"></script>
-        <!--        <script src="js/custom.js"></script>-->
-
-        <script>
-
-            // Progress Bar animation ----------------------------------
-            $(document).ready(function() {
-                $('html, body').css({'overflow': 'hidden','height': '100%'});           // disable scrolling
-                $(".progress-bar").animate({width: "100%"}, 250 );                      // start in under a sec
-                $("#home").animate({opacity: "1"}, 250 );                               // start in under a sec
-                setTimeout(function(){$("#progressive").css("display", "none");}, 3000);// progress bar disappears in 3s
-                setTimeout(function(){$('html, body').css({'overflow':'auto','height':'auto'});}, 3000);//enable scrolling
-            });
-
-            // Hide shadow when not scrolling ----------------------------------
-            var didScroll;  
-
-            $(window).scroll(function(event) {
-                didScroll = true;
-                $('.navbar').addClass('add-shadow');
-            });
-
-            setInterval(function() {
-                if (didScroll) {
-                    $('.navbar').removeClass('add-shadow');
-                    didScroll = false;
-                }
-            }, 250);
-            
-            // Change navbar depending on window size and scroll ------------------
-            var isMobileWindow = window.matchMedia("(max-width: 992px)");
-            var isDesktopWindow = window.matchMedia("(min-width: 993px)");
-
-            $(window).scroll(function() {
-                if (isMobileWindow.matches) {
-                    $('.navbar').removeClass('affix');
-                    $('.navbar').removeClass('add-shadow');
-                    $('.navtext').addClass('nav-text-black');
-                    $('.navtext').removeClass('nav-text-white');
-                    $('.navtext').removeClass('hover-grow2');
-                    $('.navtext').addClass('hover-change-color');
-                    $(".nav-icons a").css("color", "black");
-                    console.log("OK");
-                    }
-                else if ($(window).scrollTop() > 500 && isDesktopWindow.matches) {
-                    $('.navbar').addClass('affix');
-                    $('.navbar').addClass('add-shadow');
-                    $('.navtext').addClass('nav-text-black');
-                    $('.navtext').removeClass('nav-text-white');
-                    $('.navtext').addClass('hover-grow2');
-                    $('.navtext').removeClass('hover-change-color');
-                    $(".nav-icons a").css("color", "black");
-                    console.log("OK");
-                }  
-                    else {
-                    $('.navbar').removeClass('affix');
-                    $('.navbar').removeClass('add-shadow');
-                    $('.navtext').addClass('nav-text-white');
-                    $('.navtext').removeClass('nav-text-black');
-                    $('.navtext').addClass('hover-grow2');
-                    $('.navtext').removeClass('hover-change-color');
-                    $(".nav-icons a").css("color", "white");
-                }
-
-            });
-            
-        </script>
-
-
+        <script src="js/custom.js"></script>
     </body>
 </html>
